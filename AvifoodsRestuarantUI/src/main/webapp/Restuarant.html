@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Login</title>
+    <style>
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            flex-direction: column;
+            
+        }
+        
+        
+        .login-form {
+            background-color: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-form h2 {
+            color: #FF6B6B;
+            margin-bottom: 20px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .login-form .login-btn {
+            background-color: #FF6B6B;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form .login-btn:hover {
+            background-color: #FF8E8E;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Restaurant Login</h1>
+        <form id="loginForm" action="LoginServlet" method="POST" class="login-form">
+            <label for="restaurantId">Restaurant ID:</label>
+            <input type="text" id="restaurantId" name="restaurantId" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div id="errorMessage"></div>
+    </div>
+</body>
+</html>
